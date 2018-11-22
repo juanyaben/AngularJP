@@ -1,0 +1,11 @@
+
+<div class="container-fluid">  
+  <div *ngFor="let user of users">
+    <div class="panel panel-default" routerLink = '/detalles/{{user.id}}' style="cursor:pointer"> 
+      <div class="panel-heading">{{user.name}}</div>
+      <div class="panel-body">{{user.username}}<br>{{user.phone}}<br>{{user.email}},<br>{{user.website}}</div>
+    </div>
+  </div>
+  
+  </div>
+

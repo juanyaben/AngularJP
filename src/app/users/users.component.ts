@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+import { NameServicieService } from '../Servicios/name-servicie.service';
+
+@Component({
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
+  
+})
+export class UsersComponent implements OnInit {
+  users : Object;
+
+  constructor(private servicio:NameServicieService){}
+
+  ngOnInit() {
+    this.servicio.buscarPersonas().subscribe (datosSuscribe => this.users = datosSuscribe);
+  }
+
+}
